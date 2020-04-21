@@ -14,6 +14,11 @@ class AuthController extends Controller
     {
         return view('login');
     }  
+
+    public function homepage()
+    {
+        return view('homepage');
+    }  
  
     public function registration()
     {
@@ -30,7 +35,7 @@ class AuthController extends Controller
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
             // Authentication passed...
-            return redirect()->intended('dashboard');
+            return redirect()->intended('homepage');
         }
         return Redirect::to("login")->withSuccess('Oppes! You have entered invalid credentials');
     }
@@ -47,7 +52,7 @@ class AuthController extends Controller
  
         $check = $this->create($data);
        
-        return Redirect::to("dashboard")->withSuccess('Great! You have Successfully loggedin');
+        return Redirect::to("homepage")->withSuccess('Great! You have Successfully loggedin');
     }
      
     public function dashboard()

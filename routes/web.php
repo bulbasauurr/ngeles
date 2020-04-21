@@ -18,6 +18,7 @@ Route::get('/', function () {
 
 });
 
+Route::get('homepage', 'AuthController@homepage');
 Route::get('login', 'AuthController@index');
 Route::post('post-login', 'AuthController@postLogin'); 
 Route::get('registration', 'AuthController@registration');
