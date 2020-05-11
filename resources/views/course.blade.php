@@ -27,6 +27,10 @@
             margin-left: 850px;
             margin-bottom: 50px;
         }
+        
+        .btn{
+            margin-left: 85px;
+        }
 
         
         </style>
@@ -68,6 +72,7 @@
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">Last updated 3 mins ago</small>
+                        <a href="#" class="btn btn-primary btn btn-primary btn-sm active" role="button" aria-pressed="true">See More</a>
                     </div>
                 </div>
                 </div>
@@ -90,6 +95,7 @@
                     </div>
                     <div class="card-footer">
                     <small class="text-muted">Last updated 1 week ago</small>
+                    <a href="#" class="btn btn-primary btn btn-primary btn-sm active" role="button" aria-pressed="true">See More</a>
                     </div>
                 </div>
                 </div>
@@ -112,6 +118,7 @@
                     </div>
                     <div class="card-footer">
                     <small class="text-muted">Last updated 1 day ago</small>
+                    <a href="#" class="btn btn-primary btn btn-primary btn-sm active" role="button" aria-pressed="true">See More</a>
                     </div>
                 </div>
                 </div>
@@ -134,6 +141,7 @@
                     </div>
                     <div class="card-footer">
                     <small class="text-muted">Last updated 3 mins ago</small>
+                    <a href="#" class="btn btn-primary btn btn-primary btn-sm active" role="button" aria-pressed="true">See More</a>
                     </div>
                 </div>
                 </div>
@@ -156,6 +164,7 @@
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">Last updated 3 mins ago</small>
+                        <a href="#" class="btn btn-primary btn btn-primary btn-sm active" role="button" aria-pressed="true">See More</a>
                     </div>
                 </div>
                 </div>
@@ -178,6 +187,7 @@
                     </div>
                     <div class="card-footer">
                     <small class="text-muted">Last updated 1 week ago</small>
+                    <a href="#" class="btn btn-primary btn btn-primary btn-sm active" role="button" aria-pressed="true">See More</a>
                     </div>
                 </div>
                 </div>
