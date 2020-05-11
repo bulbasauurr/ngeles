@@ -78,5 +78,9 @@ class AuthController extends Controller
         Auth::logout();
         return Redirect('login');
     }
-
+    
+    public function course()
+    {
+        return view('course');
+    }
 }
