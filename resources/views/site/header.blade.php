@@ -18,10 +18,10 @@
                     </div>
                 </form>  
             <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="{{action('AuthController@homepage')}}">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Course</a>
+                <a class="nav-link" href="{{action('AuthController@course')}}">Course</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Lembaga</a>
