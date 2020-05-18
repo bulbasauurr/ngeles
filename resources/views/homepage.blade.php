@@ -56,5 +56,7 @@
             margin-top: -6px;" class="a">Telah banyak orang yang membuktikan bahwa belajar Bahasa inggris langsung di kampung inggris bias memaksimalkan kemampuan Bahasa mereka</p>
     </div>  
 </div>
+<div>
+
 
 @stop

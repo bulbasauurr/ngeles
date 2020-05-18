@@ -38,7 +38,7 @@
                     <ul class="list-unstyled">
                     <li> <a href="#"> Become Teacher </a></li>
                         </br>
-                        <li> <a href="#"> Become Student </a></li>
+                        <li> <a href="{{action('AuthController@index')}}"> Become Student </a></li>
                         </br>
                         <li> <a href="#"> Become Both </a></li>
                         </br>
@@ -53,6 +53,7 @@
         <section class="footer-bottom row border-top-white">
             <div class="col-sm-6">
                 <p class="text-white-50"> Copyright © 2020 Ngeles
+                <br> <a class="small" href="{{url('logout')}}">Logout</a>
             </div>
         </section>
         <!-- //footer-top -->

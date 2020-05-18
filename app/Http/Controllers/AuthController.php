@@ -52,7 +52,7 @@ class AuthController extends Controller
  
         $check = $this->create($data);
        
-        return Redirect::to("homepage")->withSuccess('Great! You have Successfully loggedin');
+        return Redirect::to("login")->withSuccess('Great! You have Successfully logged in');
     }
      
     public function dashboard()

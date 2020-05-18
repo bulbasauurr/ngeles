@@ -97,7 +97,7 @@
                     </div>
                     <div class="card-footer">
                     <small class="text-muted">Last updated 1 week ago</small>
-                    <a href="#" class="btn btn-primary btn btn-primary btn-sm active" role="button" aria-pressed="true">See More</a>
+                    <a href="{{action('PlanController@index')}}" class="btn btn-primary btn btn-primary btn-sm active" role="button" aria-pressed="true">See More</a>
                     </div>
                 </div>
                 </div>

@@ -29,21 +29,25 @@
                  {{ csrf_field() }}
  
                 <div class="form-label-group">
-                  <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" >
+                <input type="email" name="email" id="inputEmail" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus placeholder="Email address" >
                   <label for="inputEmail">Email address</label>
  
                   @if ($errors->has('email'))
-                  <span class="error">{{ $errors->first('email') }}</span>
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $errors->first('email') }}</strong>
+                    </span>
                   @endif    
                 </div> 
  
                 <div class="form-label-group">
-                  <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password">
+                  <input type="password" name="password" id="inputPassword" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required placeholder="Password">
                   <label for="inputPassword">Password</label>
                    
                   @if ($errors->has('password'))
-                  <span class="error">{{ $errors->first('password') }}</span>
-                  @endif  
+                    <span class="invalid-feedback" role="alert">
+                      <strong>{{ $errors->first('password') }}</strong>
+                      </span>
+                  @endif 
                 </div>
  
                 <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign In</button>
