@@ -9,15 +9,18 @@ class SubscriptionController extends Controller
 {
     public function create(Request $request, Plan $plan)
     {
-        if($request->user()->subscribedToPlan($plan->stripe_plan, 'main')) {
-            return redirect()->route('homepages')->with('success', 'You have already subscribed the plan');
-        }
         $plan = Plan::findOrFail($request->get('plan'));
-        
-        $request->user()
+        $user = $request->user();
+        $paymentMethod = $request->paymentMethod;
+
+        $user->createOrGetStripeCustomer();
+        $user->updateDefaultPaymentMethod($paymentMethod);
+        $user
             ->newSubscription('main', $plan->stripe_plan)
-            ->create($request->stripeToken);
-        
-        return redirect()->route('homepages')->with('success', 'Your plan subscribed successfully');
+            ->create($paymentMethod, [
+                'email' => $user->email,
+            ]);
+
+        return redirect()->route('homepage')->with('status', 'Your plan subscribed successfully');
     }
 }

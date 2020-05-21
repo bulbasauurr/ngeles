@@ -5,6 +5,8 @@
             <div class="row">
                 <aside class="col-sm-3 col-md-3 white">
                     <h5 class="title">Ngeles.com</h5>
+                    <ul class="list-unstyled">
+                        <li> <a href="{{url('logout')}}">Logout</a></li>
                 </aside>
                 <aside class="col-sm-3  col-md-3 white">
                     <h5 class="title">Community</h5>
@@ -53,7 +55,6 @@
         <section class="footer-bottom row border-top-white">
             <div class="col-sm-6">
                 <p class="text-white-50"> Copyright © 2020 Ngeles
-                <br> <a class="small" href="{{url('logout')}}">Logout</a>
             </div>
         </section>
         <!-- //footer-top -->

@@ -13,11 +13,11 @@ class PlanController extends Controller
 
         return view('plans.index', compact('plans'));
     }
-    public function show(Plan $plan, Request $request)
+    public function show(\App\Plan $plan, Request $request)
     {
-        if($request->user()->subscribedToPlan($plan->stripe_plan, 'main')) {
-            return redirect()->route('home')->with('success', 'You have already subscribed the plan');
-        }
-        return view('plans.show', compact('plan'));
+        $paymentMethods = $request->user()->paymentMethods();
+
+        $intent = $request->user()->createSetupIntent();
+        return view('plans.show', compact('plan', 'intent'));
     }
 }

@@ -1,6 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
+@extends('app')
+@section('title', 'Homepage')
+@section('content')
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -144,7 +145,7 @@
                     </div>
 
                     <div class="text-truncate">
-                        <h1 class="text-muted">IDR 500.000,00 - 1.000.000,00 </h1>
+                        <h1 class="text-muted">IDR 500.000,00 - 700.000,00 </h1>
                         <br>
                     </div>
 
@@ -164,7 +165,7 @@
                         </div>
                         
                         <div class="col-6">
-                        <a href="#" class="btn btn-warning  active" role="button" aria-pressed="true">Book</a>
+                        <a href="{{action('PlanController@index')}}" class="btn btn-warning  active" role="button" aria-pressed="true">Book</a>
                         </div>
                     </div>
                 
@@ -179,4 +180,5 @@
         </div>
     </div>
 </body>
-</html> 
+
+@stop
