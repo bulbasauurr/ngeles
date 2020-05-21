@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="">
-                <p>You will be charged ${{ number_format($plan->cost, 2) }} for {{ $plan->name }} Plan</p>
+                <p>You will be charged IDR{{ number_format($plan->cost, 2) }} for {{ $plan->name }} Plan</p>
             </div>
             <div class="card">
                 <form action="{{ route('subscription.create') }}" method="post" id="payment-form">
@@ -26,7 +26,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button id="card-button" class="btn btn-dark" type="submit" data-secret="{{ $intent->client_secret }}">Pay</button>
+                        <button id="card-button" href="{{action('AuthController@index')}}" class="btn btn-dark" type="submit" data-secret="{{ $intent->client_secret }}">Pay</button>
                     </div>
                 </form>
             </div>

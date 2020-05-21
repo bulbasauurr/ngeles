@@ -17,10 +17,8 @@ class SubscriptionController extends Controller
         $user->updateDefaultPaymentMethod($paymentMethod);
         $user
             ->newSubscription('main', $plan->stripe_plan)
-            ->create($paymentMethod, [
-                'email' => $user->email,
-            ]);
+            ->create($paymentMethod, []);
 
-        return redirect()->route('homepage')->with('status', 'Your plan subscribed successfully');
+        return redirect()->route('homepage')->with('success', 'Your plan subscribed successfully');
     }
 }
