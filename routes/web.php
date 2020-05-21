@@ -26,7 +26,7 @@ Route::post('post-registration', 'AuthController@postRegistration');
 Route::get('dashboard', 'AuthController@dashboard'); 
 Route::get('logout', 'AuthController@logout')->name('logout');
 Route::get('course', 'AuthController@course');
-
+Route::get('coursedetail', 'AuthController@coursedetail');
 Route::view('product', 'pages.product');
 
 Route::group(['middleware' => 'auth'], function() {

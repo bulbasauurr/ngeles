@@ -84,4 +84,8 @@ class AuthController extends Controller
         return view('course');
     }
     
+    public function coursedetail()
+    {
+        return view('coursedetail');
+    }
 }
