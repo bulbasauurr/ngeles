@@ -27,10 +27,11 @@
               <h3 class="login-heading mb-4">Welcome Dashboard!</h3>
               <div class="card">
                   <div class="card-body">
-                    You have been subscibed, {{ ucfirst(Auth()->user()->name) }} !
+                    You have been subscibed, Mr./Mrs. {{ ucfirst(Auth()->user()->name) }} !
                   </div>
                   <div class="card-body">
                     <a class="small" href="{{url('logout')}}">Logout</a>
+                    <a class="small" href="{{action('AuthController@course')}}">Back to course</a>
                   </div>
               </div>
             </div>

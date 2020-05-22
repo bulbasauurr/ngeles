@@ -19,6 +19,11 @@ class SubscriptionController extends Controller
             ->newSubscription('main', $plan->stripe_plan)
             ->create($paymentMethod, []);
 
-        return redirect()->route('homepage')->with('success', 'Your plan subscribed successfully');
+        return redirect()->route('dashboard')->with('success', 'Your plan subscribed successfully');
     }
+
+    public function dashboard()
+    {
+        return view('dashboard');
+    } 
 }
